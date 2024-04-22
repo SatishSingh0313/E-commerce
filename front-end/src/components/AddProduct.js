@@ -21,8 +21,8 @@ const AddProduct = () => {
             body: JSON.stringify({ name, price, category, company }),
             headers: {
                 'Content-Type': 'application/json',
-                 authorization:`bearer ${JSON.parse(localStorage.getItem('token'))}`
-    
+                authorization: `bearer ${JSON.parse(localStorage.getItem('token'))}`
+
             }
         });
         result = await result.json();
@@ -30,7 +30,7 @@ const AddProduct = () => {
         console.log(userId);
 
     }
-    
+
     return (
         <div className="add-product">
             <h1>Add Your Product </h1>
