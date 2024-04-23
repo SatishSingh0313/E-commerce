@@ -10,6 +10,7 @@ import ProdcutList from './components/ProductList';
 import UpdateProduct from './components/UpdateProduct';
 import ViewProduct from './components/ViewProduct';
 import Profile from './components/Profile';
+import About from './components/About';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
 
       <Route path="/signup" element={<SignUp/>}></Route>
       <Route path="/login" element={<Login/>}></Route>
+      <Route path="about" element={<About/>}></Route>
      </Routes>
     </BrowserRouter>
     <Footer/>
