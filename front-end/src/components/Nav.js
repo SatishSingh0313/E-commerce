@@ -12,7 +12,7 @@ const Nav = () => {
    
     return (
         <div>
-            <img src={shop} alt="logo" className="logo" />
+           <Link to="/"> <img src={shop} alt="logo" className="logo" /></Link>
             {auth ? <ul className='nav-ul'>
                 <li><Link to="/">Products </Link></li>
                 <li><Link to="/add">Add Product</Link></li>
