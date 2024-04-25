@@ -1,11 +1,11 @@
 import logo from "../logo.jpg"
-
+import  { Link } from "react-router-dom"
 const About = () => {
 
 
     return (
         <div className="login">
-            <img src={logo} alt=""></img>
+           <Link to="/"> <img src={logo} alt=""></img></Link>
             <h2>You Think We Built Your Vision</h2>
             <h1>We Mind Your Business !!</h1>
             <p><h3>Are you desiring to achieve your digital dream with the best-combined services?
