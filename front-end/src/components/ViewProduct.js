@@ -50,6 +50,7 @@ const ViewProduct = () => {
                 <li>Price</li>
                 <li>Category</li>
                 <li>Company</li>
+                <li>Cart</li>
                 
             </ul>
 
@@ -60,7 +61,8 @@ const ViewProduct = () => {
                         <li>{item.name}</li>
                         <li>{item.price}</li>
                         <li>{item.category}</li>
-                        <li>{item.company}  <button>add tocary</button></li>
+                        <li>{item.company}</li>
+                        <li><button>Add to Cart</button></li>
                        {/* <li className="product-logo"><img alt='' src={shop}/></li> */}
                         
                         
