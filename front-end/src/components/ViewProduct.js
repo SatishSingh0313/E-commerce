@@ -60,7 +60,7 @@ const ViewProduct = () => {
                         <li>{item.name}</li>
                         <li>{item.price}</li>
                         <li>{item.category}</li>
-                        <li>{item.company}</li>
+                        <li>{item.company}  <button>add tocary</button></li>
                        {/* <li className="product-logo"><img alt='' src={shop}/></li> */}
                         
                         
