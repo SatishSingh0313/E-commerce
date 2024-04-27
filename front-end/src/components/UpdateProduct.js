@@ -11,7 +11,7 @@ const UpdateProduct = () => {
 
     useEffect(()=>{
         getProductDetails();
-    },)
+    },[])
 
     const getProductDetails=async()=>{
         console.log(params);
@@ -20,7 +20,7 @@ const UpdateProduct = () => {
                 authorization:`bearer ${JSON.parse(localStorage.getItem('token'))}`
 
             }
-        });
+        },[]);
         result=await result.json();
         setName(result.name);
         setPrice(result.price);
@@ -51,16 +51,16 @@ const UpdateProduct = () => {
     return (
         <div className="add-product">
             <h1>Product Update </h1>
-            <input className="inpurBox" type="text" text placeholder="Enter Product Name"
+            <input className="inpurBox" type="text"  placeholder="Enter Product Name"
                 value={name} onChange={(e) => { setName(e.target.value) }} />
 
-            <input className="inpurBox" type="text" text placeholder="Enter Product Price"
+            <input className="inpurBox" type="text"  placeholder="Enter Product Price"
                 value={price} onChange={(e) => { setPrice(e.target.value) }} />
 
-            <input className="inpurBox" type="text" text placeholder="Enter Product Category"
+            <input className="inpurBox" type="text"  placeholder="Enter Product Category"
                 value={category} onChange={(e) => { setCategory(e.target.value) }} />
 
-            <input className="inpurBox" type="text" text placeholder="Enter Product Company"
+            <input className="inpurBox" type="text"  placeholder="Enter Product Company"
                 value={company} onChange={(e) => { setcompany(e.target.value) }} />
             <br />
             <button className="btn" type="text" onClick={updateProduct}>Update Product</button>
