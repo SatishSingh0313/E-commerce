@@ -1,18 +1,20 @@
+import React from "react";
 
-const Cart = () => {
-
-   const addToCard = ()=>{
-        let item=localStorage.getItem("user");
-        console.log(item);
-
-   }
+const Card = ({ product, addToCart }) => {
   return (
-    <div className="login">
-      <h2>Shopping Cart</h2>
-      <h1>Your All Item </h1>
-       <button onClick={addToCard}>Click</button>
+    <div className="product-card">
+      {/* <img src={product.image} alt={product.name} className="product-image" /> */}
+      <div className="product-details">
+        <h2 className="product-name">{product.name}</h2>
+        <p className="product-price">${product.price}</p>
+        <p className="product-category">{product.category}</p>
+        <p className="product-company">{product.company}</p>
+        <button className="add-to-cart-button" onClick={() => addToCart(product)}>
+          Add to Cart
+        </button>
+      </div>
     </div>
   );
 };
 
-export default Cart;
+export default Card;
